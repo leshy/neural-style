@@ -138,7 +138,11 @@ def main():
 
 
 def imread(path):
-    return scipy.misc.imread(path).astype(np.float)
+    data = scipy.misc.imread(path)
+    print("IMG",data)
+    data = data.astype(np.float)
+    print("FLOATDATA",data)
+    return data
 
 
 def imsave(path, img):
